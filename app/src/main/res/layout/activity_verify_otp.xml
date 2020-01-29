@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activity.VerifyOTPActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:onClick="backLoginActivity"
+            android:padding="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Enter the code that was sent to "/>
+
+        <TextView
+            android:id="@+id/showNumberTVID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text=""/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/otp1EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/otp2EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/otp3EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/otp4EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/otp5EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:imeOptions="actionNext"/>
+
+            <EditText
+                android:id="@+id/otp6EtID"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:imeOptions="actionDone"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Continue"
+            android:id="@+id/continueBtn"
+            android:onClick="continueNext"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:background="@color/colorPrimary"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBarId"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</layout>

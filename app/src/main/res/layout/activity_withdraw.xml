@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.WithdrawActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:elevation="5dp"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/backBtnIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="back"
+                        android:paddingTop="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="8dp"
+                        android:src="@drawable/ic_arrow_back_black_24dp"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/titleTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="Withdraw"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <RelativeLayout
+                android:id="@+id/balanceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance: "
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/currentBalanceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="1000 Coin"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/coinRateInfoIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="openTooltip"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_info_black_24dp"
+                        android:tint="@color/red" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/balanceLayout"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select payment method"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rechargeRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Recharge"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/bKashRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="bKash (Only personal)"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rocketRB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rocket (Only personal)"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusableInTouchMode="true"
+                    android:hint="Mobile Number"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius"
+                    app:boxCornerRadiusBottomStart="@dimen/radius"
+                    app:boxCornerRadiusTopEnd="@dimen/radius"
+                    app:boxCornerRadiusTopStart="@dimen/radius">
+
+                    <EditText
+                        android:id="@+id/mNumberET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:imeOptions="actionNext"
+                        android:inputType="textFilter|numberDecimal"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_size_medium" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Confirm Mobile Number"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius"
+                    app:boxCornerRadiusBottomStart="@dimen/radius"
+                    app:boxCornerRadiusTopEnd="@dimen/radius"
+                    app:boxCornerRadiusTopStart="@dimen/radius">
+
+                    <EditText
+                        android:id="@+id/mNumberConfirmET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:imeOptions="actionDone"
+                        android:inputType="textFilter|numberDecimal"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/padding_medium"
+                        android:singleLine="true"
+                        android:textSize="@dimen/text_size_medium" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@drawable/button_background"
+                    android:onClick="submit"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_medium" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <com.nhaarman.supertooltips.ToolTipRelativeLayout
+            android:id="@+id/toolTipRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:elevation="1dp" />
+
+    </FrameLayout>
+</layout>

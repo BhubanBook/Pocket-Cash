@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "178628486945",
+    "firebase_url": "https://pocket-cash-2fce1.firebaseio.com",
+    "project_id": "pocket-cash-2fce1",
+    "storage_bucket": "pocket-cash-2fce1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178628486945:android:65142e718e9bb377",
+        "android_client_info": {
+          "package_name": "bd.com.dev.pocketcash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178628486945-ul0ntr18faqfn7v5gcb3uenqi1v37qa7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bd.com.dev.pocketcash",
+            "certificate_hash": "30183bbcc4d94df3b19ca4c176b857ad888f88c5"
+          }
+        },
+        {
+          "client_id": "178628486945-2h95rpvudoo46d9s27n9iqdbfc6i19hk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmCmD_ZysP4pfjfFfUuIaaKkv35-Qjf_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178628486945-2h95rpvudoo46d9s27n9iqdbfc6i19hk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
